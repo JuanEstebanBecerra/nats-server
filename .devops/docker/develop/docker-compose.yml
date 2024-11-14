@@ -1,0 +1,15 @@
+services:
+  nats-server:
+    image: nats
+    container_name: nats-server
+    tty: true
+    # working_dir: /usr/src/app/
+    volumes:
+      - ./nats/nats.conf:/nats.conf
+    command: ["-c", "/nats.conf"]
+    networks:
+      - nats-network
+
+networks:
+  nats-network:
+    external: true

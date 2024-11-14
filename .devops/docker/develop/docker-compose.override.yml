@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  nats-server:
+    ports:
+      - "4222:4222"
+      - "8080:8080"
